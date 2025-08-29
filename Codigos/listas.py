@@ -1,6 +1,6 @@
 import random as rnd
 C = []
-n = 100
+n = 5
 a = int(input("a: "))
 b = int(input("b: "))
 for i in range(n):
@@ -11,4 +11,5 @@ for k in range(a,b+1):
     for i in range(n):
         if C[i] == k:
             conti= conti + 1
-            print(conti)
+    print(conti)
+    conti=0
