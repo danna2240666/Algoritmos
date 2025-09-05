@@ -8,6 +8,7 @@ d= n
 suma= ""
 i=1
 
+<<<<<<< HEAD:P3.py
 while d>1:
     r= str(d%b)
     suma= r + suma
@@ -18,3 +19,15 @@ if d==1:
     print(suma)
 else:
     print(suma)
+=======
+for i in range(1, n+1):
+    if d>1:
+        d= int(d/b**i)
+        r= str(d%b)
+        suma= r + suma
+    elif d==1:
+        suma= "1" + suma
+        print(suma)
+    else:
+        print(suma + "f")
+>>>>>>> c9332fa078e7527825aa505299db6f93960c4a85:Taller_1/P3.py
