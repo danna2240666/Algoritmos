@@ -1,5 +1,10 @@
-n= int(input("Ingrese el valor para comprobar si tiene raiz exacta: "))
+n= int(input("Ingrese el valor para comprobar si tiene raiz entera: "))
 
-for i in range(1,n+1):
-    if n==i**2:
-        print("si")
+i=1
+while n!=i**2:
+    if i==n:
+        print(f"{n} no tiene una raiz entera")
+        break
+    i= i+1
+else:
+    print(f"{n} tiene raiz entera {i}")

@@ -5,16 +5,16 @@ if b>9:
     print("Por favor ingrese un valor entre 1 y 9")
 
 d= n
-
 suma= ""
+i=1
 
-for i in range(1, n+1):
-    if d>1:
-        d= int(d/b**i)
-        r= str(d%b)
-        suma= r + suma
-    elif d==1:
-        suma= "1" + suma
-        print(suma)
-    else:
-        print(suma + "f")
+while d>1:
+    r= str(d%b)
+    suma= r + suma
+    d= int(n/b**i)
+    i= i+1
+if d==1:
+    suma= "1" + suma
+    print(suma)
+else:
+    print(suma)
