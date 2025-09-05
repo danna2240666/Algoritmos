@@ -34,4 +34,5 @@ elif op == 2:
       cos= cos + ((-1)**i)*(x**(2*i))/(num)
     print(cos)
 else:
+
    print("El valor de esta opcion se puede hallar, pero aun no ha sido implementada")
