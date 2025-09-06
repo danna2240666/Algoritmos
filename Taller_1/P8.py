@@ -1,46 +1,41 @@
-import random as rnd
+n= int(input("Ingrese el numero de elementos de la lista: "))
 
-n = int(input("Numero de elementos de la lista: "))
-a = int(input("limite inferior (enteros): "))
-b = int(input("limite superior (enteros): "))
+lista= []
 
-lista = []
+print(f"Ingrese los {n} valores de la lista: ")
 for i in range(n):
-    lista.append(rnd.randint(a, b))
-print(lista)
-""""elementos = []
-#for i in range(a, b + 1):
-#    elementos.append(i)
-elementos = [*range(a, b + 1)]
+    e= int(input())
+    lista.append(e)
+print(f"Su lista es de la forma {lista}")
 
 conteos = []
 
-print(lista)
-
-
-for j in range(len(elementos)):
+for i in range(len(lista)):
     conteo = 0
-    for i in range(n):
-        if lista[i] == elementos[j] :
+    for j in range(len(lista)):
+        if lista[j] == lista[i]:
             conteo = conteo + 1
     conteos.append(conteo)
 
-print(elementos)
-print(conteos)
+moda= conteos[0]
+num= lista[0]
+for i in range(1, len(conteos)):
+    if conteos[i]>moda:
+        moda= conteos[i]
+        num= lista[i]
 
-for i in range(len(elementos)):
-    print(f"{elementos[i]} aparece {conteos[i]} veces")
-conteo=0
+nums= []
+for j in range(len(lista)):
+    if conteos[j]==moda:
+        rep= False
+        for k in range(len(nums)):
+            if lista[j]== nums[k]:
+                rep= True
+        if rep== False:
+            nums.append(lista[j])
 
-for i in range(len(lista)):
-    for j in range(len(lista)):
-        if lista[i]==lista[j]:
-            conteo= conteo + 1
-    print(conteo)
-    conteo= 0"""
-menor= lista[0]
-for j in range(lista[1], lista[len(lista)-1]+1):
-    if lista[j]>lista[0]:
-        menor= lista[i]
-a= menor
-print(a)
+fe= str(nums[0])
+for i in range(1, len(nums)):
+    fe= fe + "," + str(nums[i])
+
+print(f"El/los numero(s) moda es/son {fe}, repetido(s) {moda} veces en la lista")
