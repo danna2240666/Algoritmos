@@ -1,0 +1,16 @@
+#cme
+C:\Users\CENTIC> D:
+
+D:\> python -m venv ambiente1
+
+D:\>
+D:\> notepad
+
+D:\> .\ambiente1\Scripts\activate
+
+#poweshell (aclaracion, move on)
+#.\ambiente1\Scripts\Activate.ps1
+#Set-ExecutionPolicy RemotedSigned -Scope CurrentUser
+
+pip install numpy matplotlib numba
+code . #abrir visual con (ambiente1)
